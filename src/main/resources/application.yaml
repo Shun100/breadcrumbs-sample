@@ -1,0 +1,15 @@
+app:
+  breadcrumb:
+    storage: ltree # parent: parend_id方式, ltree: ltree方式
+spring:
+  application:
+    name: breadcrumbs-sample
+  datasource:
+    url: jdbc:postgresql://localhost:5432/breadcrumb_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  sql:
+    # アプリ起動時にdata.sqlを実行してデータを投入する。
+    init:
+      mode: always
